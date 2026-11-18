@@ -1,0 +1,459 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-width: 100%;
+    font-family: 'Open Sans', Arial, sans-serif;
+    background: #f1f5f9;
+    color: #334155;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+#header {
+    background: #1e293b;
+    padding: 40px 0 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    animation: fadeSlideDown 0.8s ease forwards;
+}
+
+.tagline {
+    margin: 8px 0 20px;
+    font-size: 1.1rem;
+    color: #94a3b8;
+    font-weight: 400;
+    animation: fadeSlideDown 1s ease forwards;
+}
+
+nav.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+nav.navbar li {
+    display: inline-block;
+}
+
+nav.navbar a {
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav.navbar a:hover {
+    background: #334155;
+    color: #ffffff;
+}
+
+main {
+    padding: 30px 0;
+}
+
+.section-box {
+    margin-bottom: 40px;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #1e293b;
+    border-bottom: 3px solid #3b82f6;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+h3 {
+    font-size: 1.15rem;
+    color: #1e293b;
+    margin: 0 0 8px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    min-width: 0;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    border-color: #93c5fd;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.09);
+}
+
+.card ul {
+    padding-left: 20px;
+    margin: 8px 0 0;
+}
+
+.card li {
+    margin-bottom: 6px;
+}
+
+.job-meta {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin: 0 0 12px;
+    font-weight: 600;
+}
+
+.interactive-panel {
+    margin-top: 16px;
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #f8fafc;
+    transition: background 0.3s ease;
+}
+
+.interactive-panel:hover {
+    background: #f1f5f9;
+}
+
+.interactive-panel summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: #1e293b;
+    font-size: 0.95rem;
+}
+
+.interactive-panel p {
+    margin: 10px 0 0;
+    color: #475569;
+    line-height: 1.7;
+}
+
+table.skill-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+table.skill-table th,
+table.skill-table td {
+    border: 1px solid #e2e8f0;
+    padding: 12px 14px;
+    text-align: left;
+}
+
+table.skill-table th {
+    background: #1e293b;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+table.skill-table td:nth-child(3) {
+    width: 28%;
+    min-width: 175px;
+}
+
+table.skill-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+table.skill-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.meter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    gap: 6px;
+}
+
+.meter-percent {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #1e293b;
+}
+
+.level-badge {
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.level-advanced {
+    color: #ffffff;
+    background: #1e293b;
+}
+
+.level-proficient {
+    color: #ffffff;
+    background: #1d4ed8;
+}
+
+.level-intermediate {
+    color: #3730a3;
+    background-color: #e0e7ff;
+}
+
+.level-native {
+    color: #ffffff;
+    background: #065f46;
+}
+
+.level-cefr {
+    color: #ffffff;
+    background: #2563eb;
+}
+
+.progress-track {
+    background: #e2e8f0;
+    border-radius: 20px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, #3b82f6, #1e40af);
+    height: 100%;
+    border-radius: 20px;
+    animation: fillBar 1.4s ease forwards;
+}
+
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes fadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.two-col-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.featured-card,
+.education-featured {
+    grid-column: span 2;
+    border-left: 4px solid #3b82f6;
+}
+
+.edu-status {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.status-ongoing {
+    color: #1d4ed8;
+    background: #dbeafe;
+}
+
+.status-complete {
+    color: #065f46;
+    background: #d1fae5;
+}
+
+.contact-form {
+    display: grid;
+    gap: 12px;
+}
+
+.contact-form label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #334155;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.btn {
+    background: #1e293b;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: #3b82f6;
+    transform: translateY(-1px);
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #1d4ed8;
+}
+
+#footer {
+    background: #1e293b;
+    color: #94a3b8;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+@media (max-width: 960px) {
+    table.skill-table td:nth-child(3) {
+        min-width: 145px;
+    }
+    .container {
+        padding: 0 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    #header {
+        padding: 30px 0 16px;
+    }
+    #header h1 {
+        font-size: 1.8rem;
+    }
+    nav.navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+    .two-col-grid {
+        grid-template-columns: 1fr;
+    }
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+    .featured-card,
+    .education-featured {
+        grid-column: span 1;
+    }
+    table.skill-table td {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        padding: 6px 10px;
+        border: none;
+    }
+    table.skill-table tr {
+        display: block;
+        border-bottom: 1px solid #e2e8f0;
+        padding: 10px 0;
+    }
+    table.skill-table thead {
+        display: none;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .tagline {
+        font-size: 0.95rem;
+    }
+    .card {
+        padding: 14px;
+    }
+    .progress-track {
+        min-width: 100%;
+    }
+    .meter-header {
+        flex-wrap: wrap;
+    }
+    .level-badge {
+        white-space: normal;
+    }
+    nav.navbar a {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+}
